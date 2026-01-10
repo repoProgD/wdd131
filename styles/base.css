@@ -28,7 +28,7 @@ header {
     text-align: center;
     padding: 1.5rem 0;
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     font-family: var(--heading-font);
     font-size: 1.25rem;
 }
@@ -90,7 +90,7 @@ main h1 {
     background-color: var(--overlay-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px #CCCCCC;
 
 }
 
@@ -106,7 +106,7 @@ main h1 {
 .card h2 {
     height: 40px;
     background-color: var(--secondary-color);
-    color: white;
+    color: #ffffff;
     font-family: var(--heading-font);
     grid-column: 1 / -1;
     text-align: center;
@@ -146,7 +146,7 @@ main h1 {
 
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 4rem;
