@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131- Dynamic Web Fundamentals - Book of Mormo App</title>
+    <meta name="author" content="Diego Ledesma">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals course homepage showcasing dynamic web development concepts, by Diego Ledesma.">
+
+
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- Google Fonts (Lora & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/bom.js" defer></script>
+
+</head>
+
+<body>
+    <h1>📖 Book of Mormon - Top 10</h1>
+    <main>
+        <label for="favchap">Enter Book and Chapter: </label>
+        <input type="text" id="favchap" placeholder="Alma 5">
+        <button type="submit">Add Chapter</button>
+
+        <ul id="list">
+
+        </ul>
+        <!-- el botón de abajo se recomienda al final de la Learning Activity: Document Object Model -->
+        <!-- Mejora la accesibilidad, muestra el qué hace el botón, por eso no es redundante con la declaración del JS -->
+        <button aria-label="Close" id="close-button">❌</button>
+
+    </main>
+    <!-- Hasta acá llega semana 2 -->
+
+
+    <footer>
+
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina</p>
+        <p><span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>

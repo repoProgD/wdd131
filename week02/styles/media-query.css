@@ -1,0 +1,46 @@
+:root {
+    --content-max-width: 640px;
+
+    /*--primary-color: #3e06a7;
+    --secondary-color: #3D2B56;
+    
+    --accent1-color: #C5F5B2;
+    --accent2-color: #D3F55D;*/
+    --bkg-color: #7f81eb;
+    --overlay-color: #EDEDED;
+    --my-font: "Roboto", sans-serif;
+    --my-margin: 1rem auto;
+
+}
+
+.common-style {
+    max-width: var(--content-max-width);
+    background-color: var(--bkg-color);
+    margin: 1rem auto;
+    box-sizing: border-box;
+    font-family: var(--my-font);
+    padding: 0.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    background-color: var(--overlay-color);
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    header.common-style {  /*Necesito ser más específico porque usé una clase común. Sin clases esto era más directo*/
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
