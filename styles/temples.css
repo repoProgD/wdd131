@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #23053E;
+    --secondary-color: #3D2B56;
+    --overlay-color: #EDEDED;
+    --accent1-color: #C5F5B2;
+    --accent2-color: #D3F55D;
+    --heading-font: "Lora", serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+
+header {
+
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+#temples-title {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+main {
+    background-color: var(--secondary-color);
+    max-width: 1000px;
+    margin: 0 auto;
+    color:#ffffff;
+
+}
+
+main section{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    place-items: center;
+}
+
+.main-title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000000;
+}
+
+.active {
+    color: yellow;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation a {
+    display: none;
+}
+
+.navigation.show a {
+    display: block;
+}
+
+.open a{
+    display: block;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+footer span {
+    font-weight: bold;
+    color: var(--accent1-color);
+}

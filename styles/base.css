@@ -35,7 +35,8 @@ header {
 
 /*header nav*/
 nav {
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
+
 
 }
 
@@ -52,12 +53,15 @@ nav a {
     display: block;
     text-align: center;
     padding: 1rem;
+    color:#ffffff;
     text-decoration: none;
     transition: background-color 0.5s ease;
 }
 
 nav a:hover {
-    background-color: var(--accent2-color);
+    text-decoration: none;
+    background-color: #eeefff;
+    color: #000000;
 }
 
 
