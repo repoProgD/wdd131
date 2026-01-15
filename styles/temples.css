@@ -3,7 +3,6 @@
     --secondary-color: #3D2B56;
     --overlay-color: #EDEDED;
     --accent1-color: #C5F5B2;
-    --accent2-color: #D3F55D;
     --heading-font: "Lora", serif;
     --body-font: "Roboto", sans-serif;
 }
@@ -23,8 +22,6 @@ header {
     display: grid;
     grid-gap: 1rem;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px #333;
 }
 #temples-title {
     font-family: var(--heading-font);
@@ -61,7 +58,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
     text-decoration: none;
@@ -70,12 +67,8 @@ nav a {
 
 nav a:hover {
     text-decoration: underline double;
-    background-color: #eee;
+    background-color: #eeeeee;
     color: #000000;
-}
-
-.active {
-    color: yellow;
 }
 
 #menu {
@@ -113,7 +106,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 1.5rem 0;
-    margin-top: 4rem;
+    margin-top: 7.4rem;
 }
 
 footer p {
