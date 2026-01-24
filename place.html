@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131- Dynamic Web Fundamentals - My Country Page</title>
+    <meta name="author" content="Diego Ledesma">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals course W03 assignment by Diego Ledesma.">
+
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <!-- Google Fonts (Lora & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Argentina</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/cataratas-large.webp" media="(min-width: 768px)">
+                <img src="images/cataratas-small.webp" alt="Iguzú Falls" width="768" height="514">
+            </picture>
+        </div>
+
+        <section class="info-section data-section">
+            <h2>General Data</h2>
+            
+            <div class="info-container">
+                <dl class="data-list">
+                    <div class="data-item">
+                        <dt>Area</dt>
+                        <dd>2.780.000 km²</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Population</dt>
+                        <dd>47 million</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Capital</dt>
+                        <dd>Buenos Aires</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Language</dt>
+                        <dd>Spanish</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Currency</dt>
+                        <dd>Argentine Peso</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Time Zone</dt>
+                        <dd>UTC-3</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Calling Code</dt>
+                        <dd>+54</dd>
+                    </div>
+                </dl>
+            
+            </div>
+        </section>
+    
+        <section class="info-section weather-section">
+            <h2>Weather</h2>
+            <img src="images/sunny-icon.svg" class="sunny-icon" alt="Sunny Icon" width="50" , height="50">
+            <div class="info-container">
+                <dl class="data-list">
+                    <div class="data-item">
+                        <dt>Temperature</dt>
+                        <dd id="temp">86°F / 30°C</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Wind</dt>
+                        <dd id="wind">9 mph</dd>
+                    </div>
+
+                    <div class="data-item">
+                        <dt>Wind Chill</dt>
+                        <dd id="wind-chill"></dd>
+                    </div>
+                </dl>
+                    
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
