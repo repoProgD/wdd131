@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131- Dynamic Web Fundamentals - Temples</title>
+    <meta name="author" content="Diego Ledesma">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals course W02 middle-week activity by Diego Ledesma.">
+
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <!-- Google Fonts (Lora & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <span id="temples-title">Temple Album</span>
+
+        <button type="button" id="menu" aria-label="Toggle menu"></button>
+
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <a href="#" id="home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#" id="old">Old</a>
+                </li>
+
+                <li>
+                    <a href="#" id="new">New</a>
+                </li>
+
+                <li>
+                    <a href="#" id="large">Large</a>
+                </li>
+
+                <li>
+                    <a href="#" id="small">Small</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <h1 class="main-title">Home</h1>
+        <section id="temples"></section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina</p>
+        <p><span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>
