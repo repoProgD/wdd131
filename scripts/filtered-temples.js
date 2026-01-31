@@ -127,7 +127,9 @@ function displayTemples(templesArray) {
     });
 }
 
-displayTemples(temples)
+requestAnimationFrame(() => {
+    displayTemples(temples);
+});
 
 document.querySelector("#home").addEventListener("click", (e) => {
     e.preventDefault();
