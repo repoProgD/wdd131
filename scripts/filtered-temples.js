@@ -131,14 +131,18 @@ requestAnimationFrame(() => {
     displayTemples(temples);
 });
 
+let pageTitle = document.querySelector("#main-title");
+
 document.querySelector("#home").addEventListener("click", (e) => {
     e.preventDefault();
+    pageTitle.textContent = "Home";
 
     displayTemples(temples);
 });
 
 document.querySelector("#old").addEventListener("click", (e) => {
     e.preventDefault();
+    pageTitle.textContent = "Old Temples";
 
     let oldTemples = temples.filter(temple => {
         let year = Number(temple.dedicated.split(",")[0]);
@@ -150,6 +154,7 @@ document.querySelector("#old").addEventListener("click", (e) => {
 
 document.querySelector("#new").addEventListener("click", (e) => {
     e.preventDefault();
+    pageTitle.textContent = "New Temples";
 
     let newTemples = temples.filter(temple => {
         let year = Number(temple.dedicated.split(",")[0]);
@@ -161,6 +166,7 @@ document.querySelector("#new").addEventListener("click", (e) => {
 
 document.querySelector("#large").addEventListener("click", (e) => {
     e.preventDefault();
+    pageTitle.textContent = "Large Temples";
 
     let largeTemples = temples.filter(temple => {
         let each_area = temple.area
@@ -172,6 +178,7 @@ document.querySelector("#large").addEventListener("click", (e) => {
 
 document.querySelector("#small").addEventListener("click", (e) => {
     e.preventDefault();
+    pageTitle.textContent = "Small Temples";
 
     let smallTemples = temples.filter(temple => {
         let each_area = temple.area
