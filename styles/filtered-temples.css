@@ -23,22 +23,24 @@ header {
     grid-gap: 1rem;
     padding: 20px;
 }
+
 #temples-title {
     font-family: var(--heading-font);
     font-size: 1.5rem;
     color: #ffffff;
     text-align: center;
 }
+
 main {
     background-color: var(--secondary-color);
     max-width: 1000px;
     margin: 0 auto;
-    color:#ffffff;
+    color: #ffffff;
 
 }
 
-main section{
-    display:grid;
+main section {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
@@ -66,8 +68,6 @@ main section{
 }
 
 #temples section img {
-    width: 100%;
-    height: auto;
     display: block;
 }
 
@@ -123,7 +123,7 @@ nav a:hover {
     display: block;
 }
 
-.open a{
+.open a {
     display: block;
 }
 
