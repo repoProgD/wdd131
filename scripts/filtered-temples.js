@@ -104,8 +104,6 @@ function displayTemples(templesArray) {
         let img = document.createElement("img");
         img.src = temple.imageUrl;
         img.alt = temple.imageAlt;
-        img.width = 280;
-        img.height = 175;
         img.loading = "lazy";
 
         let location = document.createElement("p");
