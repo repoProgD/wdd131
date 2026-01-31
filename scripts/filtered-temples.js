@@ -138,7 +138,6 @@ document.querySelector("#home").addEventListener("click", (e) => {
     pageTitle.textContent = "Home";
 
     displayTemples(temples);
-    closeMenu();
 });
 
 document.querySelector("#old").addEventListener("click", (e) => {
@@ -151,7 +150,6 @@ document.querySelector("#old").addEventListener("click", (e) => {
     });
 
     displayTemples(oldTemples);
-    closeMenu();
 });
 
 document.querySelector("#new").addEventListener("click", (e) => {
@@ -164,7 +162,6 @@ document.querySelector("#new").addEventListener("click", (e) => {
     });
 
     displayTemples(newTemples);
-    closeMenu();
 });
 
 document.querySelector("#large").addEventListener("click", (e) => {
@@ -177,32 +174,18 @@ document.querySelector("#large").addEventListener("click", (e) => {
     });
 
     displayTemples(largeTemples);
-    closeMenu();
 });
 
-document.querySelector("#small").addEventListener("click", (e) => {
-    e.preventDefault();
-    pageTitle.textContent = "Small Temples";
 
-    let smallTemples = temples.filter(temple => {
-        let each_area = temple.area
-        return each_area < 10000;
-    });
-
-    displayTemples(smallTemples);
-    closeMenu();
-});
-
-const menuButton = document.querySelector("#menu");
+const hambutton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("show");
-    menuButton.classList.toggle("open");
+hambutton.addEventListener("click", () => {
+    toggleActive(navigation);
+    toggleActive(hambutton);
 });
 
-function closeMenu() {
-    navigation.classList.remove("show");
-    navigation.classList.remove("open");
+function toggleActive(element) {
+    element.classList.toggle("open");
 }
 
