@@ -47,8 +47,6 @@ main section {
     place-items: center;
 }
 
-
-
 .main-title {
     font-size: 2rem;
     text-align: center;
@@ -146,3 +144,4 @@ footer span {
     font-weight: bold;
     color: var(--accent1-color);
 }
+
