@@ -44,19 +44,19 @@
                 </div>
                 <div>
                     <label class="for" for="rating2">2⭐</label>
-                    <input type="radio" name="rating" id="rating2" value="2">
+                    <input type="radio" name="rating" id="rating2" value="2" required>
                 </div>
                 <div>
                     <label class="for" for="rating3">3⭐</label>
-                    <input type="radio" name="rating" id="rating3" value="3">
+                    <input type="radio" name="rating" id="rating3" value="3" required>
                 </div>
                 <div>
                     <label class="for" for="rating4">4⭐</label>
-                    <input type="radio" name="rating" id="rating4" value="4">
+                    <input type="radio" name="rating" id="rating4" value="4" required>
                 </div>
                 <div>
                     <label class="for" for="rating5">5⭐</label>
-                    <input type="radio" name="rating" id="rating5" value="5">
+                    <input type="radio" name="rating" id="rating5" value="5" required>
                 </div>
             </fieldset>
 
@@ -68,10 +68,22 @@
             <!-- Features -->
             <fieldset>
                 <legend>Which features did you find useful in the product?</legend>
-                <label><input type="checkbox" name="features" id="f1" value="feature1">Durability</label>
-                <label><input type="checkbox" name="features" id="f2" value="feature2">Ease of Use</label>
-                <label><input type="checkbox" name="features" id="f3" value="feature3">Performance</label>
-                <label><input type="checkbox" name="features" id="f4" value="feature4">Design</label>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f1" value="feature1">
+                    <label for="f1">Durability</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f2" value="feature2">
+                    <label for="f2">Ease of Use</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f3" value="feature3">
+                    <label for="f3">Performance</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f4" value="feature4">
+                    <label for="f4">Design</label>
+                </div>
             </fieldset>
 
             <!-- Written Review -->
