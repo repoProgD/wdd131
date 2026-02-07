@@ -28,14 +28,15 @@
         <h1 class="header-title">Product Review</h1>
     </header>
 
+        <label for="product">Product Name:</label>
+        <select name="product" id="product" required>
+            <option value="" disabled selected>Choose a product</option>
+        </select>
    
         <form method="get" action="review.html">
-            <label for="product">Product Name:</label>
-            <select name="product" id="product" required>
-                <option value="" disabled selected>Choose a product</option>
-            </select>
-
+            
             <!-- Overall Rating -->
+            <fieldset class="rating">
                 <legend>Overall Rating</legend>
                 <label class="rating-label">
                     <span>1⭐</span>
@@ -43,21 +44,21 @@
                 </label>
                 <label class="rating-label">
                     <span>2⭐</span>
-                    <input type="radio" name="rating" id="rating2" value="2">
+                    <input type="radio" name="rating" id="rating2" value="2" required>
                 </label>
                 <label class="rating-label">
                     <span>3⭐</span>
-                    <input type="radio" name="rating" id="rating3" value="3">
+                    <input type="radio" name="rating" id="rating3" value="3" required>
                 </label>
                 <label class="rating-label">
                     <span>4⭐</span>
-                    <input type="radio" name="rating" id="rating4" value="4">
+                    <input type="radio" name="rating" id="rating4" value="4" required>
                 </label>
                 <label class="rating-label">
                     <span>5⭐</span>
-                    <input type="radio" name="rating" id="rating5" value="5">
+                    <input type="radio" name="rating" id="rating5" value="5" required>
                 </label>
-
+            </fieldset>
 
             <!-- Date -->
             <label for="date">Date:</label>
@@ -65,13 +66,13 @@
 
 
             <!-- Features -->
-
+            <fieldset>
                 <legend>Which features did you find useful in the product?</legend>
                 <label><input type="checkbox" name="features" id="f1" value="feature1">Durability</label>
                 <label><input type="checkbox" name="features" id="f2" value="feature2">Ease of Use</label>
                 <label><input type="checkbox" name="features" id="f3" value="feature3">Performance</label>
                 <label><input type="checkbox" name="features" id="f4" value="feature4">Design</label>
-
+            </fieldset>
 
             <!-- Written Review -->
 
