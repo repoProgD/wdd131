@@ -1,3 +1,4 @@
+/* General rules*/
 :root {
     --primary-color: #23053E;
     --secondary-color: #3D2B56;
@@ -16,6 +17,10 @@
     font-family: var(--body-font);
 }
 
+p{
+    text-align: center;
+}
+
 
 header {
 
@@ -27,50 +32,141 @@ header {
     color: var(--text-color-light)
 }
 
+
 main {
     background-color: var(--secondary-color);
     max-width: 1080px;
     margin: 0 auto;
     color: var(--text-color-light);
+    padding-bottom: 2rem;
 
 }
 
 main section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+   
     padding: 1rem;
-    place-items: center;
-}
-h1, h2, h3 {
-    font-family: var(--heading-font);
-    padding-top: 1.5rem;
+  
 }
 
-.main-title {
+
+.main-title{
     font-size: 2rem;
+    letter-spacing: 0.2rem;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.5rem;
+    width: 50%;
+    height: 3px;
+    background-color: var(--accent1-color);
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    padding-top: 1.5rem;
     text-align: center;
 }
 
-#site-name p{
-    margin: 0 5rem;
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.color-list li{
+nav a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+.navigation a {
+    display: none;
+}
+
+.navigation.show a {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    main section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.open a {
+    display: block;
+}
+
+
+/*.color-list li {
     display: grid;
     grid-template-columns: 225px 1fr;
     margin-bottom: 0.5rem;
-}
+}*/
 
-
-figure{
-    margin-bottom: 25px;
-}
 
 footer {
     background-color: var(--primary-color);
     color: var(--text-color-light);
-    text-align: center;
     padding: 1.5rem 0;
 }
 
@@ -84,3 +180,183 @@ footer span {
     color: var(--accent1-color);
 }
 
+
+
+/*Home rules*/
+
+.main-section{
+    width:90%;
+    display: grid;
+    gap: 2rem 1rem 2rem 1rem;
+    margin: 3rem auto 0 auto;
+    margin-top: 2rem;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--overlay-color);
+    color: var(--text-color-dark);
+}
+
+.section-title {
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-image {
+    margin-top: 0.75rem;
+    width: 300px;
+    height: 169px;
+}
+
+
+@media(min-width: 768px) {
+    #description {
+        grid-template-columns: 1fr;
+        max-width: 1000px;
+    }
+    #purpose {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;         
+            max-width: 1000px;
+            gap: 2rem;
+            padding: 6rem 1rem 2rem 1rem;
+           
+        }
+
+    #entry-points {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 1000px;
+    }
+
+    #entry-points h2 {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+.entry-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*Alkali Metals / Noble Gases - rules*/
+
+#elements{
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+}
+
+
+.element-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    background-color: var(--overlay-color);
+    color: #000;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px #eeeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    transition: z-index 0.3s;
+    overflow: visible;
+}
+
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.5s ease-in-out;
+    cursor: zoom-in;
+    z-index: 1;
+    margin-bottom: 0.75rem;
+}
+
+.label {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .element-card:hover {
+        z-index: 100;
+
+    }
+
+    .element-card:hover .card-image {
+        transform: scale(2.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 2px solid var(--accent1-color);
+    }
+}
+
+.warning{
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/*Properties page rules*/
+
+
+.heatmap-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.heatmap-image{
+    width: 100%;
+    height: auto;
+    display:block;
+}
+
+.info-section {
+
+    background-color: #000000;
+    width: 300px;
+    box-shadow: 0 4px 10px var(--accent1-color);
+    border: 1px solid #ffffff; /*Este borde lo voy a cambiar por el color más inteso en uno y menos intenso en el otro*/
+}
+
+@media(min-width: 768px) {
+    .main-properties {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .heatmap-section {
+        grid-column: 1 / -1;
+    }
+
+    .info-section {
+        max-width: 400px;
+    }
+
+    
+    #properties-intro {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    #properties-intro h2 {
+       flex:1;
+       text-align: left;
+       padding-top: 0;
+       margin-top: 0;
+    }
+
+    #properties-intro p {
+        flex:2;
+        text-align: left;
+        max-width: 50%;
+    }
+    
+}

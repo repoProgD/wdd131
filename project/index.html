@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131- Dynamic Web Fundamentals - Final Project Home</title>
+    <meta name="author" content="Diego Ledesma">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course Final Project by Diego Ledesma.">
+
+
+    <link rel="stylesheet" href="styles/website-plan.css">
+    <!-- Google Fonts (Lora & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/hamb-button.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <span id="header-title">Visual Chemestry</span>
+
+        <button type="button" id="menu" aria-label="Toggle menu"></button>
+
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <a href="index.html" id="home">Home</a>
+                </li>
+
+                <li>
+                    <a href="alkali-metals.html" id="alkali-metals">Alkali Metals</a>
+                </li>
+
+                <li>
+                    <a href="noble-gases.html" id="noble-gases">Noble Gases</a>
+                </li>
+
+                <li>
+                    <a href="periodic-properties.html" id="periodic-properties">Periodic Properties</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="index-main">
+        <h1 class="main-title" id="main-title">Home</h1>
+        <section class="main-section" id="description">
+            <p>Welcome to Visual Chemistry, a project that explores the periodic table through visual representations, helping reveal patters and relationships between chemical elements.</p>
+        </section>
+        
+        <section class="main-section" id="purpose">
+            <div class ="text-container">
+                <h2 class="section-title">Purpose</h2>
+                <p>Our goal is to provide visual tools that support the understanding of core chemistry concepts by making chemical properties easier to compare and grasp.</p>
+            </div>
+
+            <figure class="home-figure">
+                <img src="images/atomic-radius-mini-2.webp" alt="Periodic table" class="placeholder-image" width="300" height="169">
+                <figcaption>
+                    <a href="periodic-properties.html">View heatmaps</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="main-section" id="entry-points">
+            <h2 class="section-title">Our Features</h2>
+            <article class="entry-card">
+                <img src="images/atomic-radius-mini-2.webp" alt="Periodic table" class="placeholder-image" width="300" height="169">
+                <h3>Explore by Group</h3>
+                <p>View elements grouped by chemical groups</p>
+                <a href="alkali-metals.html">Start</a>
+            </article>
+
+            <article class="entry-card">
+                <img src="images/atomic-radius-mini-2.webp" alt="Periodic table" class="placeholder-image" width="300" height="169">
+                <h3>Explore by Property</h3>
+                <p>Discover trends using visual heatmaps</p>
+                <a href="periodic-properties.html">View</a>
+            </article>
+
+            <article class="entry-card">
+                <img src="images/atomic-radius-mini-2.webp" alt="Periodic table" class="placeholder-image" width="300" height="169">
+                <h3>Ranked View</h3>
+                <p>Compare elements by key properties</p>
+                <a href="ranking-electronegativity.html">Compare</a>
+            </article>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina</p>
+        <p><span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>
