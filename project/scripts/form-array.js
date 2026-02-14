@@ -21,7 +21,7 @@ const products = [
     },
 ];
 
-let select = document.querySelector("#product");
+let select = document.querySelector("#resource");
 let choice = document.createElement("option");
 
 products.forEach(product => {

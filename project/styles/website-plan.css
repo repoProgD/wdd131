@@ -17,11 +17,6 @@
     font-family: var(--body-font);
 }
 
-p{
-    text-align: center;
-}
-
-
 header {
 
     margin: 0 auto;
@@ -39,8 +34,10 @@ main {
     margin: 0 auto;
     color: var(--text-color-light);
     padding-bottom: 2rem;
+    min-height: 80vh;
 
 }
+
 
 main section {
     padding: 1rem;
@@ -76,6 +73,10 @@ h1, h2 {
 
 h3 {
     font-family: var(--heading-font);
+    text-align: center;
+}
+
+p {
     text-align: center;
 }
 
@@ -151,6 +152,7 @@ nav a:hover {
     }
 
 }
+
 
 .open a {
     display: block;
@@ -300,15 +302,17 @@ footer span {
 }
 
 @media (min-width: 768px) {
-    .element-card:hover {
-        z-index: 100;
-
-    }
 
     .element-card:hover .card-image {
-        transform: scale(2.5);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        z-index: 10;
         box-shadow: 0 10px 30px #333333;
         border: 2px solid var(--accent1-color);
+        cursor: zoom-out;
     }
 }
 
@@ -499,7 +503,7 @@ input[type="checkbox"] {
 }
 
 
-@media (min-width: 760px) {
+@media (min-width: 768px) {
 
     form {
         width:80%;
