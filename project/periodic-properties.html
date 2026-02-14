@@ -18,6 +18,7 @@
 
     <script src="scripts/hamb-button.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/array.js" defer></script>
 
 
 </head>
@@ -58,105 +59,66 @@
             <h2 class="section-title">Electronegativity Heatmap</h2>
             <p>
                 A heatmap is a representation of data using color intensity. 
-                In this visualization, -------- tones indicate higher ----propiedad---
-                value, while lighter tones represent lower values.
+                In this visualization, darker tones indicate higher electronegativity
+                values, while lighter tones represent lower values.
             </p>
         </section>
 
-        <section class="heatmap-section">
-            <img src="images/atomic-radius1080.webp" width="1080" height ="608"
-            alt="Heatmap showing electronegativity values"
-            class="heatmap-image">
-        </section>
+        <section class="heatmap-section" id="heatmap-container"></section>
 
-        <section class=" info-section highest-section">
-            <h3>Highest Electronegativity</h3>
 
-            <div class="info-container">
-                <dl class="data-list">
-                    <div class="data-item">
-                        <dt>Area</dt>
-                        <dd>2.780.000 km²</dd>
-                    </div>
+        <section class="info-section">
+            <h2>Extreme values</h2>
 
-                    <div class="data-item">
-                        <dt>Population</dt>
-                        <dd>47 million</dd>
-                    </div>
+            <div class="extremes-box">
 
-                    <div class="data-item">
-                        <dt>Capital</dt>
-                        <dd>Buenos Aires</dd>
-                    </div>
+                <article class="lowest">   
+                    <h3>Lowest Electronegativity</h3>               
+                        <dl class="data-list">
+                            
+                            <dt>Francium:</dt>
+                            <dd>0.70</dd>
+                        
+                            <dt>Cesium:</dt>
+                            <dd>0.79</dd>
+                        
+                            <dt>Rubidium:</dt>
+                            <dd>0.82</dd>
+                        
+                            <dt>Potassium:</dt>
+                            <dd>0.82</dd>
+                        
+                            <dt>Barium:</dt>
+                            <dd>0.85</dd>
 
-                    <div class="data-item">
-                        <dt>Language</dt>
-                        <dd>Spanish</dd>
-                    </div>
+                        </dl>
+                </article>
+    
+                
+                <article class="highest">
+                    <h3>Highest Electronegativity</h3>
+                        <dl class="data-list">
+                            
+                            <dt>Fluorine:</dt>
+                            <dd>3.90</dd>
 
-                    <div class="data-item">
-                        <dt>Currency</dt>
-                        <dd>Argentine Peso</dd>
-                    </div>
+                            <dt>Oxygen:</dt>
+                            <dd>3.44</dd>
+                        
+                            <dt>Chlorine:</dt>
+                            <dd>3.16</dd>
+                        
+                            <dt>Nitrogen:</dt>
+                            <dd>3.04</dd>
+                        
+                            <dt>Krypton:</dt>
+                            <dd>3.00</dd>
+                            
+                        </dl>
 
-                    <div class="data-item">
-                        <dt>Time Zone</dt>
-                        <dd>UTC-3</dd>
-                    </div>
-
-                    <div class="data-item">
-                        <dt>Calling Code</dt>
-                        <dd>+54</dd>
-                    </div>
-                </dl>
-
+                </article>
             </div>
         </section>
-
-        <section class=" info-section lowest-section">
-            <h3>Lowest Electronegativity</h3>
-        
-            <div class="info-container">
-                <dl class="data-list">
-                    <div class="data-item">
-                        <dt>Area</dt>
-                        <dd>2.780.000 km²</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Population</dt>
-                        <dd>47 million</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Capital</dt>
-                        <dd>Buenos Aires</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Language</dt>
-                        <dd>Spanish</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Currency</dt>
-                        <dd>Argentine Peso</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Time Zone</dt>
-                        <dd>UTC-3</dd>
-                    </div>
-        
-                    <div class="data-item">
-                        <dt>Calling Code</dt>
-                        <dd>+54</dd>
-                    </div>
-                </dl>
-        
-            </div>
-        </section>
-
 
     </main>
 

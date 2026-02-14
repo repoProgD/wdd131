@@ -1,5 +1,5 @@
 const elements = [
-    {
+    {   /* periodic element objects*/
         elementName: "Lithium",
         atomicNumber: 3,
         atomicMass: 6.94,
@@ -177,10 +177,16 @@ function displayElements(elementsArray) {
         img.width = 300;
         img.height = 169;
 
-        
+        /*Avoide repeated downloads*/
         card.addEventListener("mouseenter", () => {
+            if (!img.dataset.fullLoaded) { 
+                const full = new Image();
+                full.src = element.fullImage;
+                img.dataset.fullLoaded = "true";
+            }
             img.src = element.fullImage;
         });
+
         card.addEventListener("mouseleave", () => {
             img.src = element.thumbnail;
         });
@@ -238,4 +244,116 @@ requestAnimationFrame(() => {
         displayElements(nobleGases);
     }
 });
+
+/*Index objects*/ 
+
+const homeEntries = [
+    {
+        title: "Explore Noble Gases", 
+        description: "Learn about Nobel Gases and their properties",
+        image: "images/helium-mini.webp",
+        alt: "Helium element",
+        link: "noble-gases.html",
+        buttonText: "Start"
+    },
+
+    {
+        title: "Explore Alkali Metals",
+        description: "Learn about the first family of the periodic table",
+        image: "images/lithium-mini.webp",
+        alt: "Lithium element",
+        link: "alkali-metals.html",
+        buttonText: "View"
+    },
+
+    {
+        title: "Explore by properties",
+        description: "Learn about atomic properties and their properties",
+        image: "images/atomic-radius-mini-2.webp",
+        alt: "Periodic table heatmap",
+        link: "periodic-properties.html",
+        buttonText: "Start"
+    },
+]
+
+function displayHomeEntries(entries) { 
+    let container = document.querySelector("#entry-points");
+    if (!container) return;
+
+    entries.forEach(entry => {
+        let card = document.createElement("article");
+        card.classList.add("entry-card");
+
+        const img = document.createElement("img");
+        img.src = entry.image;
+        img.alt = entry.alt;
+        img.loading = "lazy";
+        img.width = 300;
+        img.height = 169;
+
+        let title = document.createElement("h3");
+        title.textContent = entry.title;
+
+        let paragraph = document.createElement("p");
+        paragraph.textContent = entry.description;
+
+        let link = document.createElement("a");
+        link.href = entry.link;
+        link.textContent = entry.buttonText;
+
+        card.append(img, title, paragraph, link);
+        container.appendChild(card);
+    });
+
+}
+
+
+function displayHomePurpose() { 
+    let container = document.querySelector("#home-purpose");
+    if (!container) return;
+    
+    let img = document.createElement("img");
+    /*Another way of adding images to the DOM*/
+    img.src = "images/lithium-mini.webp";
+    img.alt = "Atomic radius heatmap";
+    img.loading = "lazy"
+    img.width = 300;
+    img.height = 169;
+
+    let figcap = document.createElement("figcaption");
+
+    let link = document.createElement("a");
+    link.href = "periodic-properties.html";
+    link.textContent = "View heatmaps";
+
+    figcap.appendChild(link);
+    container.append(img, figcap)
+}
+
+
+/*Periodic properties*/
+
+function displayHeatmap() { 
+    let container = document.querySelector("#heatmap-container");
+    if (!container) return;
+
+    let img = document.createElement("img");
+    img.src = "images/electronegativity.webp";
+    img.alt = "Heatmap showing electronegativity values";
+    img.width = 980;
+    img.height = 552;
+    img.loading = "lazy";
+    img.classList.add("heatmap-image");
+
+
+    container.appendChild(img);
+}
+
+/* Display */
+document.addEventListener("DOMContentLoaded", () => {
+    displayHomeEntries(homeEntries);
+    displayHomePurpose();
+    displayHeatmap();
+});
+
 
