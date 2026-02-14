@@ -166,7 +166,7 @@ function displayElements(elementsArray) {
         card.classList.add("element-card");
 
         
-        let title = document.createElement("h3");
+        let title = document.createElement("h2");
         title.textContent = element.elementName;
 
         let img = document.createElement("img");
@@ -288,8 +288,8 @@ function displayHomeEntries(entries) {
         img.src = entry.image;
         img.alt = entry.alt;
         img.loading = "lazy";
-        img.width = 300;
-        img.height = 169;
+        img.width = 268; /*actual size of the file 300x169 */
+        img.height = 151;
 
         let title = document.createElement("h3");
         title.textContent = `${entry.title}`;
@@ -301,6 +301,7 @@ function displayHomeEntries(entries) {
         link.href = `${entry.link}`;
         link.textContent = `${entry.buttonText}`;
         link.classList.add("index-main-link");
+        link.setAttribute("aria-label", `${entry.title} - ${entry.buttonText}`);
 
         card.append(img, title, paragraph, link);
         container.appendChild(card);
@@ -327,6 +328,7 @@ function displayHomePurpose() {
     link.href = "periodic-properties.html";
     link.textContent = "View heatmaps";
     link.classList.add("index-main-link");
+    link.setAttribute("aria-label", `Periodic properties - View heatmaps`);
 
     figcap.appendChild(link);
     container.append(img, figcap)

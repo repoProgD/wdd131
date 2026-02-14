@@ -70,7 +70,7 @@ main section {
 h1, h2 {
     font-family: var(--heading-font);
     padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
     text-align: center;
 }
 
@@ -194,7 +194,7 @@ footer span {
 .main-section{
     width:90%;
     display: grid;
-    gap: 2rem 1rem 2rem 1rem;
+    gap: 2rem 1rem;
     margin: 3rem auto 0 auto;
     margin-top: 2rem;
     justify-content: center;
@@ -227,13 +227,11 @@ footer span {
 
 .text-container{
     width: 45%;
-    margin-bottom: 2rem;
 }
 
 
 @media(min-width: 768px) {
     #description {
-        grid-template-columns: 1fr;
         max-width: 1000px;
     }
 
@@ -272,10 +270,9 @@ footer span {
     max-width: 300px;
     height: auto;
     background-color: var(--overlay-color);
-    color: #000;
+    color: #000000;
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 4px 6px var(--text-color-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,7 +314,7 @@ footer span {
 
 .warning{
     font-weight: bold;
-    color: #EE0000;
+    color: #7b0a40;
 }
 
 /*Properties page rules*/
@@ -498,6 +495,7 @@ input[type="checkbox"] {
     height: 40px;
     margin-top: 1rem;
     font-weight: 600;
+    background-color: #ffffff;
 }
 
 
