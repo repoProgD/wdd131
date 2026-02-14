@@ -254,7 +254,7 @@ const homeEntries = [
         image: "images/helium-mini.webp",
         alt: "Helium element",
         link: "noble-gases.html",
-        buttonText: "Start"
+        buttonText: "Explore Noble Gases"
     },
 
     {
@@ -263,7 +263,7 @@ const homeEntries = [
         image: "images/lithium-mini.webp",
         alt: "Lithium element",
         link: "alkali-metals.html",
-        buttonText: "View"
+        buttonText: "Explore Alkali Metals"
     },
 
     {
@@ -272,7 +272,7 @@ const homeEntries = [
         image: "images/atomic-radius-mini-2.webp",
         alt: "Periodic table heatmap",
         link: "periodic-properties.html",
-        buttonText: "Start"
+        buttonText: "Explore periodic properties"
     },
 ]
 
