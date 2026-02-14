@@ -120,7 +120,7 @@ const elements = [
         atomicNumber: 36,
         atomicMass: 83.80,
         classification: "Noble Gas",
-        electronegativity: 0.00,
+        electronegativity: 3.00,
         atomicRadius: 202.0,
         standardState: "Gas",
         thumbnail: "images/krypton-mini.webp",
@@ -133,7 +133,7 @@ const elements = [
         atomicNumber: 54,
         atomicMass: 131.29,
         classification: "Noble Gas",
-        electronegativity: 0.00,
+        electronegativity: 2.6,
         atomicRadius: 216.0,
         standardState: "Gas",
         thumbnail: "images/xenon-mini.webp",
@@ -165,7 +165,7 @@ function displayElements(elementsArray) {
         let card = document.createElement("article");
         card.classList.add("element-card");
 
-        
+
         let title = document.createElement("h2");
         title.textContent = element.elementName;
 
@@ -179,7 +179,7 @@ function displayElements(elementsArray) {
 
         /*Avoid repeated downloads*/
         card.addEventListener("mouseenter", () => {
-            if (!img.dataset.fullLoaded) { 
+            if (!img.dataset.fullLoaded) {
                 const full = new Image();
                 full.src = element.fullImage;
                 img.dataset.fullLoaded = "true";
@@ -193,7 +193,7 @@ function displayElements(elementsArray) {
 
         let atomicNumber = document.createElement("p");
         atomicNumber.innerHTML = `<span class="label">Atomic Number: </span> ${element.atomicNumber.toLocaleString()}`;
-        
+
         let atomicMass = document.createElement("p");
         atomicMass.innerHTML = `<span class="label">Atomic Mass: </span> ${element.atomicMass.toLocaleString()} u`;
 
@@ -218,7 +218,7 @@ function displayElements(elementsArray) {
         card.appendChild(atomicRadius)
         card.appendChild(standardState);
 
-        if (element.atomicNumber > 82) { 
+        if (element.atomicNumber > 82) {
             let warning = document.createElement("p");
             warning.textContent = `${"Warning: Unstable / Radioactive"}`;
             warning.classList.add("warning");
@@ -602,17 +602,17 @@ requestAnimationFrame(() => {
         displayElements(alkaliMetals);
     }
 
-    else if (isNoblePage) { 
+    else if (isNoblePage) {
         let nobleGases = elements.filter(element => element.classification === "Noble Gas");
         displayElements(nobleGases);
     }
 });
 
-/*Index objects*/ 
+/*Index objects*/
 
 const homeEntries = [
     {
-        title: "Explore Noble Gases", 
+        title: "Explore Noble Gases",
         description: "Learn about Noble Gases and their properties",
         image: "images/helium-mini.webp",
         alt: "Helium element",
@@ -639,7 +639,7 @@ const homeEntries = [
     },
 ]
 
-function displayHomeEntries(entries) { 
+function displayHomeEntries(entries) {
     let container = document.querySelector("#entry-points");
     if (!container) return;
 
@@ -673,10 +673,10 @@ function displayHomeEntries(entries) {
 }
 
 
-function displayHomePurpose() { 
+function displayHomePurpose() {
     let container = document.querySelector("#home-purpose");
     if (!container) return;
-    
+
     let img = document.createElement("img");
     /*Another way of adding images to the DOM*/
     img.src = "images/electronegativity-mini.webp";
@@ -700,7 +700,7 @@ function displayHomePurpose() {
 
 /*Periodic properties*/
 
-function displayHeatmap() { 
+function displayHeatmap() {
     let container = document.querySelector("#heatmap-container");
     if (!container) return;
 
