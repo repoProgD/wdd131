@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Visual Chemistry</title>
+    <meta name="author" content="Diego Ledesma">
+    <meta name="description" content="Visual Chemistry's feedback page for WDD 130: Web Fundamentals from BYU-Idaho.">
+
+
+    <link rel="stylesheet" href="styles/website-plan.css">
+
+    <!-- Google Fonts (Lora & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/hamb-button.js" defer></script>
+    <script src="scripts/form-array.js" defer></script>
+    <script src="scripts/form-storing.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+</head>
+
+<body>
+   
+    <header>
+        <span id="header-title">Visual Chemestry</span>
+    
+        <button type="button" id="menu" aria-label="Toggle menu"></button>
+    
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <a href="index.html" id="home">Home</a>
+                </li>
+    
+                <li>
+                    <a href="alkali-metals.html" id="alkali-metals">Alkali Metals</a>
+                </li>
+    
+                <li>
+                    <a href="noble-gases.html" id="noble-gases">Noble Gases</a>
+                </li>
+    
+                <li>
+                    <a href="periodic-properties.html" id="periodic-properties">Periodic Properties</a>
+                </li>
+    
+                <li>
+                    <a href="feedback.html" id="periodic-properties">Feedback</a>
+                </li>
+            </ul>
+        </nav>
+    
+    </header>
+        
+   
+    <main>
+        <h1 class="main-title">Help Us Improve This Project</h1>
+        <form method="get" action="review.html">
+            <label for="product">Resource Name:</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a Visual Resource</option>
+            </select>
+            
+            <!-- Overall Rating -->
+            <fieldset class="rating">
+                <legend>Rate Our Visual Resources</legend>
+                <div>
+                    <label class="for" for="rating1">1⭐</label>
+                    <input type="radio" name="rating" id="rating1" value="1" required>      
+                </div>
+                <div>
+                    <label class="for" for="rating2">2⭐</label>
+                    <input type="radio" name="rating" id="rating2" value="2" required>
+                </div>
+                <div>
+                    <label class="for" for="rating3">3⭐</label>
+                    <input type="radio" name="rating" id="rating3" value="3" required>
+                </div>
+                <div>
+                    <label class="for" for="rating4">4⭐</label>
+                    <input type="radio" name="rating" id="rating4" value="4" required>
+                </div>
+                <div>
+                    <label class="for" for="rating5">5⭐</label>
+                    <input type="radio" name="rating" id="rating5" value="5" required>
+                </div>
+            </fieldset>
+
+            <!-- Date -->
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required>
+
+
+            <!-- Features -->
+            <fieldset>
+                <legend>Which resources would you like to see next?</legend>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f1" value="feature1">
+                    <label for="f1">Electron Configuration Visualizer</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f2" value="feature2">
+                    <label for="f2">Interactive 3D Models</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f3" value="feature3">
+                    <label for="f3">3D Molecular Orbital Animations</label>
+                </div>
+                <div class="features">
+                    <input type="checkbox" name="features" id="f4" value="feature4">
+                    <label for="f4">Interactive Periodic Table</label>
+                </div>
+            </fieldset>
+
+            <!-- Written Review -->
+
+            <label for="review">Written Review (optional)</label>
+            <textarea name="review" id="review"></textarea>
+
+            <!-- Your Name -->
+            <label for="customer">Your Name (optional)</label>
+            <input type="text" name="customer" id="customer">
+
+            <button class="submit-button" type="submit">Send Review</button>
+
+        </form>
+    </main>
+
+    <footer>
+    
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina |
+            <a href="siteplan.html" style="color: var(--accent1-color); text-decoration: underline;">
+                Website Plan
+            </a>
+        </p>
+        <p><span id="lastModified"></span></p>
+    
+    </footer>
+</body>
+
+</html>

@@ -16,17 +16,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Roboto:wght@100..900&display=swap"
         rel="stylesheet">
+
+    <script src="scripts/hamb-button.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    
 </head>
 
 <body>
 
     <header>
-        <span id="header-title">Website plan - Visual Chemistry</span>
+        <span id="header-title">Website Plan - Visual Chemestry</span>
+    
+        <button type="button" id="menu" aria-label="Toggle menu"></button>
+    
+        <nav>
+            <ul class="navigation">
+                <li>
+                    <a href="index.html" id="home">Home</a>
+                </li>
+    
+                <li>
+                    <a href="alkali-metals.html" id="alkali-metals">Alkali Metals</a>
+                </li>
+    
+                <li>
+                    <a href="noble-gases.html" id="noble-gases">Noble Gases</a>
+                </li>
+    
+                <li>
+                    <a href="periodic-properties.html" id="periodic-properties">Periodic Properties</a>
+                </li>
+    
+                <li>
+                    <a href="feedback.html" id="periodic-properties">Feedback</a>
+                </li>
+            </ul>
+        </nav>
+    
     </header>
 
     <main>
         <h1 class="main-title">Website Plan</h1>
-        <section id="site-name">
+        <section class="centered-section" id="site-name">
             <h2>Site Name: Visual Chemistry</h2>
             <p>One of the major challenges in chemistry education is that many fundamental concepts are abstract,
                 which makes them difficult for students to understand. Visual resources such as handouts, diagrams, and
@@ -37,14 +68,14 @@
             </p>
 
         </section>
-        <section id="site-purpose">
+        <section class="centered-section" id="site-purpose">
 
             <h2>Site Purpose</h2>
             <p>The purpose of this site is to provide visual tools to support the understanding of core chemistry
                 concepts.</p>
         </section>
 
-        <section id="scenarios">
+        <section class="centered-section" id="scenarios">
             <h2>Scenarios</h2>
             <ul>
                 <li>Which chemical groups are represented on this site?</li>
@@ -52,33 +83,33 @@
             </ul>
         </section>
 
-        <section id="color-schema">
+        <section class="centered-section" id="color-schema">
             <h2>Color Scheme</h2>
             <p>The color scheme for this project is represented by the following HEX codes:</p>
             <ul class="color-list">
-                <li><span class="label"><strong>Primary Color: #23053E</strong></span>
-                    <span class="description">- Use for main background</span>
+                <li><span class="label-color"><strong>Primary Color: #23053E</strong></span>
+                    <span class="description-color">- Use for main background</span>
                 </li>
-                <li><span class="label"><strong>Secondary Color: #3D2B56</strong></span>
-                    <span class="description">- Use for header and footer backgrounds</span>
+                <li><span class="label-color"><strong>Secondary Color: #3D2B56</strong></span>
+                    <span class="description-color">- Use for header and footer backgrounds</span>
                 </li>
                 <li><span><strong>Overlay Color: #EDEDED</strong></span>
-                    <span class="description">- Use for cards and other UI elements</span>
+                    <span class="description-color">- Use for cards and other UI elements</span>
                 </li>
 
                 <li><span><strong>Accent Color: #C5F5B2</strong></span>
-                    <span class="description">- Use for interactive highlights, borders, and underlines</span>
+                    <span class="description-color">- Use for interactive highlights, borders, and underlines</span>
                 </li>
                 <li><span><strong>Text Color (light): #FEFEFE</strong></span>
-                    <span class="description">- Use for text on dark backgrounds</span>
+                    <span class="description-color">- Use for text on dark backgrounds</span>
                 </li>
                 <li><span><strong>Text Color (dark): #000000</strong></span>
-                    <span class="description">- Use for text on light backgrounds</span>
+                    <span class="description-color">- Use for text on light backgrounds</span>
                 </li>
             </ul>
         </section>
 
-        <section id="typography">
+        <section class="centered-section" id="typography">
             <h2>Typography</h2>
             <ul>
                 <li>Heading Font: Lora - Use for all headings</li>
@@ -86,7 +117,7 @@
             </ul>
         </section>
 
-        <section id="wireframes">
+        <section class="centered-section" id="wireframes">
             <h2>Wireframes</h2>
             <figure>
                 <img src="images/wireframe-wide.webp" class="temple-img" alt="wide-sreen wireframe" width="640">
@@ -102,7 +133,14 @@
 
 
     <footer>
-        <p> © | Diego Ledesma | Argentina</p>
+    
+        <p> © <span id="currentyear"></span> | Diego Ledesma | Argentina |
+            <a href="siteplan.html" style="color: var(--accent1-color); text-decoration: underline;">
+                Website Plan
+            </a>
+        </p>
+        <p><span id="lastModified"></span></p>
+    
     </footer>
 </body>
 

@@ -220,7 +220,7 @@ function displayElements(elementsArray) {
 
         if (element.atomicNumber > 82) { 
             let warning = document.createElement("p");
-            warning.textContent = "Warning: Unstable / Radioactive";
+            warning.textContent = `${"Warning: Unstable / Radioactive"}`;
             warning.classList.add("warning");
             card.appendChild(warning);
         }
@@ -250,7 +250,7 @@ requestAnimationFrame(() => {
 const homeEntries = [
     {
         title: "Explore Noble Gases", 
-        description: "Learn about Nobel Gases and their properties",
+        description: "Learn about Noble Gases and their properties",
         image: "images/helium-mini.webp",
         alt: "Helium element",
         link: "noble-gases.html",
@@ -268,7 +268,7 @@ const homeEntries = [
 
     {
         title: "Explore by properties",
-        description: "Learn about atomic properties and their properties",
+        description: "Learn about atomic properties and their trends",
         image: "images/atomic-radius-mini-2.webp",
         alt: "Periodic table heatmap",
         link: "periodic-properties.html",
@@ -292,14 +292,15 @@ function displayHomeEntries(entries) {
         img.height = 169;
 
         let title = document.createElement("h3");
-        title.textContent = entry.title;
+        title.textContent = `${entry.title}`;
 
         let paragraph = document.createElement("p");
-        paragraph.textContent = entry.description;
+        paragraph.textContent = `${entry.description}`;
 
         let link = document.createElement("a");
-        link.href = entry.link;
-        link.textContent = entry.buttonText;
+        link.href = `${entry.link}`;
+        link.textContent = `${entry.buttonText}`;
+        link.classList.add("index-main-link");
 
         card.append(img, title, paragraph, link);
         container.appendChild(card);
@@ -314,7 +315,7 @@ function displayHomePurpose() {
     
     let img = document.createElement("img");
     /*Another way of adding images to the DOM*/
-    img.src = "images/lithium-mini.webp";
+    img.src = "images/electronegativity-mini.webp";
     img.alt = "Atomic radius heatmap";
     img.loading = "lazy"
     img.width = 300;
@@ -325,6 +326,7 @@ function displayHomePurpose() {
     let link = document.createElement("a");
     link.href = "periodic-properties.html";
     link.textContent = "View heatmaps";
+    link.classList.add("index-main-link");
 
     figcap.appendChild(link);
     container.append(img, figcap)
